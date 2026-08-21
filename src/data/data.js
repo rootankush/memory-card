@@ -7,7 +7,7 @@ export const cards = [
 	},
 	{
 		id: 1,
-		name: "Queen",
+		name: "Granny",
 		title: "DanDaDan",
 		img: "src/assets/img/1.webp",
 	},
