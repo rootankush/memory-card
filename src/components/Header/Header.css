@@ -18,6 +18,10 @@ h1 {
 	word-spacing: 1.25rem;
 }
 
+.describtion {
+	font-size: 1rem;
+}
+
 @media (min-width: 768px) and (max-width: 1090px) {
 	.score-card {
 		text-align: start;
