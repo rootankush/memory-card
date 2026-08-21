@@ -2,6 +2,8 @@ import Gameboard from "./components/Gameboard/Gameboard";
 import Header from "./components/Header/Header";
 import "../src/index.css";
 import { useState } from "react";
+import useSound from "use-sound";
+import clickSfx from "./assets/click.mp3";
 import { cards } from "./data/data";
 
 function App() {
@@ -9,6 +11,7 @@ function App() {
   const [highScore, setHighScore] = useState(0);
   const [clickedCardIds, setClickedCardIds] = useState([]);
   const [cardList, setCardList] = useState(cards);
+  const [playClick] = useSound(clickSfx, { volume: 0.5 });
 
   function shuffle(arr) {
     const newArr = [...arr];
@@ -29,6 +32,7 @@ function App() {
   }
 
   function handleCardClick(id) {
+    playClick();
     if (clickedCardIds.includes(id)) {
       setCurrentScore(0);
       setClickedCardIds([]);

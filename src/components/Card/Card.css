@@ -13,6 +13,7 @@
 	cursor: pointer;
 	color: inherit;
 	transition: transform 0.15s ease;
+	animation: cardPop 0.3s ease-in-out;
 }
 
 .cardBox:hover {
@@ -47,4 +48,15 @@ h3 {
 	text-align: center;
 	letter-spacing: 1px;
 	color: #111;
+}
+
+@keyframes cardPop {
+	0% {
+		transform: scale(0.85);
+		opacity: 0.5;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
 }
